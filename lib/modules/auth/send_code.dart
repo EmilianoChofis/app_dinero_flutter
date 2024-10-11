@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class SendCode extends StatefulWidget {
+  const SendCode({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<SendCode> createState() => _SendCodeState();
 }
 
-class _LoginState extends State<Login> {
+class _SendCodeState extends State<SendCode> {
   final TextEditingController _email = TextEditingController();
-  final TextEditingController _password = TextEditingController();
-  bool _isBlack = true;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -31,33 +29,14 @@ class _LoginState extends State<Login> {
                 controller: _email,
               ),
               const SizedBox(height: 16,),
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: 'Contraseña',
-                  label: const Text('Contraseña'),
-                  labelStyle: const TextStyle(color: Colors.black26),
-                  suffixIcon: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          _isBlack = !_isBlack;
-                        });
-                      }, icon: Icon(
-                      _isBlack ?
-                      Icons.visibility :
-                      Icons.visibility_off)),
-                ),
-                controller: _password,
-                obscureText: _isBlack,
-              ),
-              const SizedBox(height: 16,),
               SizedBox(
                 width: double.infinity,
                 height: 48,
                 child: ElevatedButton(onPressed: () {
                   print('email: ${_email.text}');
-                  print('email: ${_email.text}');
+                  Navigator.pushNamed(context, '/validate-code');
 
-                }, child: const Text('inicia sesion'),
+                }, child: const Text('enviar codigo'),
                   style: OutlinedButton.styleFrom(backgroundColor: Colors.blueAccent, foregroundColor: Colors.white),
                 ),
               )

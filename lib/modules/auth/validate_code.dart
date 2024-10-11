@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class ValidateCode extends StatefulWidget {
+  const ValidateCode({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<ValidateCode> createState() => _ValidateCodeState();
 }
 
-class _LoginState extends State<Login> {
+class _ValidateCodeState extends State<ValidateCode> {
   final TextEditingController _code = TextEditingController();
 
   @override
@@ -35,6 +35,7 @@ class _LoginState extends State<Login> {
                 height: 48,
                 child: ElevatedButton(onPressed: () {
                   print('email: ${_code.text}');
+                  Navigator.pushNamed(context, '/reset-password');
 
                 }, child: const Text('Validar codigo'),
                   style: OutlinedButton.styleFrom(backgroundColor: Colors.blueAccent, foregroundColor: Colors.white),
