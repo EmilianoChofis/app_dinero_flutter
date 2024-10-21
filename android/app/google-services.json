@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168571783682",
+    "project_id": "dinero-d413c",
+    "storage_bucket": "dinero-d413c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168571783682:android:f17e16b49f42d25dfd751b",
+        "android_client_info": {
+          "package_name": "com.example.app_finanzas_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBmLpQiGvGDE4GugnLsCm8dGfnTokbZ-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
